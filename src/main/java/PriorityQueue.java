@@ -10,8 +10,6 @@ public class PriorityQueue<I extends Number> {
     public void insert(int item) {
         upsizeTheArray();
         addItem(item);
-
-
     }
 
     private void addItem(int item) {
