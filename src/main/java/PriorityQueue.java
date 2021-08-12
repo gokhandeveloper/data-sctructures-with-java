@@ -9,8 +9,17 @@ public class PriorityQueue<I extends Number> {
 
     public void insert(int item) {
         upsizeTheArray();
-        //1,3,4
-        //array[index++]=item;
+        addItem(item);
+
+
+    }
+
+    private void addItem(int item) {
+        array[shiftItemsToInsert(item)] = item;
+        index++;
+    }
+
+    private int shiftItemsToInsert(int item) {
         int i;
         for(i=index-1; i>=0; i--){
             if(array[i] > item)
@@ -18,10 +27,7 @@ public class PriorityQueue<I extends Number> {
             else
                 break;
         }
-        array[i+1] = item;
-        index++;
-
-
+        return i+1;
     }
 
     private void upsizeTheArray() {
