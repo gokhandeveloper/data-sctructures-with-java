@@ -64,7 +64,6 @@ public class Array {
     public Array reverseArray() {
         Array newArray = new Array(length);
         for(int i =array.length-1; i>=0; i-- ) {
-            System.out.println("hi");
           //  for(int j =0; j<newArray.length; j++) {
                 newArray.addItem(array[i]);
           //  }
